@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&amp;family=Bebas+Neue&amp;display=swap');
+      .bg {
+        fill: #111111;
+      }
+      .text-light {
+        font-family: 'Oswald', 'Bebas Neue', sans-serif;
+        fill: #E5E5E5;
+        font-size: 38px;
+        letter-spacing: 0.1em;
+        text-anchor: middle;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+      .text-green {
+        font-family: 'Oswald', 'Bebas Neue', sans-serif;
+        fill: #39FF14;
+        font-size: 56px;
+        letter-spacing: 0.08em;
+        text-anchor: middle;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    </style>
+  </defs>
+  
+  <!-- Solid matte background matching the user's design -->
+  <rect class="bg" width="100%" height="100%" />
+  
+  <!-- Centered content group -->
+  <g transform="translate(0, 30)">
+    <!-- HI! I'M YOUSSEF ABAALI -->
+    <text x="600" y="170" class="text-light">HI! I'M YOUSSEF ABAALI</text>
+    
+    <!-- MOTION GRAPHICS -->
+    <text x="600" y="255" class="text-green">MOTION GRAPHICS</text>
+    
+    <!-- I'M HERE TO HELP YOU TO TURNING -->
+    <text x="600" y="340" class="text-light">I'M HERE TO HELP YOU TO TURNING</text>
+    
+    <!-- YOUR IDEAS INTO THE LIVE -->
+    <text x="600" y="415" class="text-light">YOUR IDEAS INTO THE LIVE</text>
+  </g>
+</svg>
