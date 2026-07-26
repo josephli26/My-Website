@@ -544,6 +544,19 @@ export function AdminCMS() {
     showNotification("Downloaded JSON site backup!", "success");
   };
 
+  const handleDownloadDefaultDataTs = () => {
+    const fileContent = `import { CMSSiteData } from "./types/cms";\n\nexport const defaultSiteData: CMSSiteData = ${JSON.stringify(data, null, 2)};\n`;
+    const blob = new Blob([fileContent], { type: "text/typescript" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "defaultData.ts";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    showNotification("Downloaded defaultData.ts file for GitHub!", "success");
+  };
+
   const handleBackupUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -736,11 +749,19 @@ export function AdminCMS() {
 
                     <div className="flex flex-col gap-3">
                       <button
+                        onClick={handleDownloadDefaultDataTs}
+                        className="w-full bg-brand-green hover:bg-brand-green/90 text-brand-black text-xs font-bold uppercase tracking-widest py-3 rounded-xl flex items-center justify-center gap-2 cursor-pointer transition-all shadow-lg"
+                      >
+                        <FileText size={14} />
+                        DOWNLOAD defaultData.ts (FOR GITHUB)
+                      </button>
+
+                      <button
                         onClick={handleBackupDownload}
-                        className="w-full bg-brand-green hover:bg-brand-green/90 text-brand-black text-xs font-bold uppercase tracking-widest py-3 rounded-xl flex items-center justify-center gap-2 cursor-pointer transition-all"
+                        className="w-full bg-neutral-900 border border-white/10 hover:border-brand-green hover:text-brand-green text-xs font-bold uppercase tracking-widest py-3 rounded-xl flex items-center justify-center gap-2 cursor-pointer transition-all text-neutral-300"
                       >
                         <Copy size={14} />
-                        DOWNLOAD FULL BACKUP
+                        DOWNLOAD JSON BACKUP
                       </button>
 
                       <label className="w-full bg-neutral-900 border border-white/10 hover:border-brand-green hover:text-brand-green text-xs font-bold uppercase tracking-widest py-3 rounded-xl flex items-center justify-center gap-2 cursor-pointer transition-all text-neutral-300 text-center">
