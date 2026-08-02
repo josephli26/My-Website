@@ -12,6 +12,7 @@ interface CMSContextType {
   uploadFile: (file: File) => Promise<string>;
   restoreBackup: (backupData: CMSSiteData) => Promise<boolean>;
   resetToDefaultData: () => Promise<boolean>;
+  clearAllSiteStorage: () => Promise<void>;
 }
 
 const CMSContext = createContext<CMSContextType | undefined>(undefined);
@@ -314,6 +315,38 @@ export function CMSProvider({ children }: { children: ReactNode }) {
     return true;
   };
 
+  const clearAllSiteStorage = async (): Promise<void> => {
+    try {
+      localStorage.clear();
+    } catch (e) {}
+    try {
+      sessionStorage.clear();
+    } catch (e) {}
+    if (typeof window !== "undefined" && "caches" in window) {
+      try {
+        const keys = await caches.keys();
+        await Promise.all(keys.map((k) => caches.delete(k)));
+      } catch (e) {}
+    }
+    if (typeof window !== "undefined" && window.indexedDB && typeof window.indexedDB.databases === "function") {
+      try {
+        const dbs = await window.indexedDB.databases();
+        for (const db of dbs) {
+          if (db.name) window.indexedDB.deleteDatabase(db.name);
+        }
+      } catch (e) {}
+    }
+    if (typeof navigator !== "undefined" && "serviceWorker" in navigator) {
+      try {
+        const registrations = await navigator.serviceWorker.getRegistrations();
+        for (const reg of registrations) {
+          await reg.unregister();
+        }
+      } catch (e) {}
+    }
+    window.location.href = window.location.origin + "?clear=" + Date.now();
+  };
+
   return (
     <CMSContext.Provider
       value={{
@@ -326,6 +359,7 @@ export function CMSProvider({ children }: { children: ReactNode }) {
         uploadFile,
         restoreBackup,
         resetToDefaultData,
+        clearAllSiteStorage,
       }}
     >
       {children}

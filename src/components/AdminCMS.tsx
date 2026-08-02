@@ -882,7 +882,7 @@ function CMSGallerySectionEditor({
 }
 
 export function AdminCMS() {
-  const { data, updateData, uploadFile, restoreBackup, resetToDefaultData, logout } = useCMS();
+  const { data, updateData, uploadFile, restoreBackup, resetToDefaultData, clearAllSiteStorage, logout } = useCMS();
   const [activeTab, setActiveTab] = useState<
     | "dashboard"
     | "home"
@@ -1373,6 +1373,19 @@ export function AdminCMS() {
     }
   };
 
+  const handleClearSiteData = async () => {
+    if (
+      window.confirm(
+        "هل أنت تأكد من أنك تريد مسح جميع بيانات الموقع والتخزين المؤقت بالكامل (Clear Site Data & LocalStorage & Cache Storage)؟\nسيتم تنظيف المتصفح وإعادة تحميل الصفحة فوراً."
+      )
+    ) {
+      showNotification("جاري مسح بيانات الموقع والتخزين المؤقت بالكامل...", "info");
+      setTimeout(() => {
+        clearAllSiteStorage();
+      }, 400);
+    }
+  };
+
   const handleBackupUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -1517,6 +1530,15 @@ export function AdminCMS() {
 
           <div className="flex items-center gap-3">
             <button
+              onClick={handleClearSiteData}
+              title="مسح جميع بيانات الموقع والتخزين المؤقت بالكامل (Clear Site Data & LocalStorage & Caches)"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-amber-500/40 hover:border-amber-400 text-[10px] text-amber-400 hover:text-amber-300 tracking-widest uppercase font-bold transition-all cursor-pointer bg-amber-950/30 shadow-sm"
+            >
+              <Trash2 size={12} />
+              CLEAR SITE DATA
+            </button>
+
+            <button
               onClick={handleResetData}
               title="مسح الذاكرة المؤقتة للمتصفح (LocalStorage) لإظهار التعديلات البرمجية في ملف defaultData.ts"
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-red-500/30 hover:border-red-500 text-[10px] text-red-400 hover:text-red-300 tracking-widest uppercase font-bold transition-all cursor-pointer bg-red-950/30"
@@ -1599,6 +1621,15 @@ export function AdminCMS() {
                       >
                         <FileText size={14} />
                         DOWNLOAD defaultData.ts (FOR GITHUB)
+                      </button>
+
+                      <button
+                        onClick={handleClearSiteData}
+                        className="w-full bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/40 hover:border-amber-400 text-amber-400 text-xs font-bold uppercase tracking-widest py-3 rounded-xl flex items-center justify-center gap-2 cursor-pointer transition-all shadow-md"
+                        title="Clear site storage, LocalStorage, Cache Storage, Service Worker registrations & reload"
+                      >
+                        <Trash2 size={14} />
+                        CLEAR SITE DATA (مسح الذاكرة والتخزين بالكامل)
                       </button>
 
                       <button
