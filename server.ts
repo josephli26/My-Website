@@ -7,13 +7,8 @@ import multer from "multer";
 const app = express();
 const PORT = 3000;
 
-// Ensure upload and public directories exist
-const PUBLIC_UPLOADS_DIR = path.join(process.cwd(), "public", "uploads");
+// Ensure upload and data folders exist
 const UPLOADS_DIR = path.join(process.cwd(), "uploads");
-
-if (!fs.existsSync(PUBLIC_UPLOADS_DIR)) {
-  fs.mkdirSync(PUBLIC_UPLOADS_DIR, { recursive: true });
-}
 if (!fs.existsSync(UPLOADS_DIR)) {
   fs.mkdirSync(UPLOADS_DIR, { recursive: true });
 }
@@ -56,11 +51,8 @@ app.use((req, res, next) => {
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
-// Serve Uploaded Files statically from both public/uploads and uploads
-app.use("/uploads", express.static(PUBLIC_UPLOADS_DIR));
+// Serve Uploaded Files statically
 app.use("/uploads", express.static(UPLOADS_DIR));
-app.use("/assets", express.static(path.join(process.cwd(), "public", "assets")));
-app.use("/src/assets", express.static(path.join(process.cwd(), "public", "src", "assets")));
 
 // Helper: Verify session auth header for protected API mutations
 function verifyAdminAuth(req: express.Request, res: express.Response, next: express.NextFunction) {
@@ -85,7 +77,7 @@ const ALLOWED_EXTENSIONS = new Set([
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, PUBLIC_UPLOADS_DIR);
+    cb(null, UPLOADS_DIR);
   },
   filename: (req, file, cb) => {
     const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
