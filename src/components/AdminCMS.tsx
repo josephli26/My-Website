@@ -915,6 +915,51 @@ export function AdminCMS() {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [isDraggingFile, setIsDraggingFile] = useState(false);
 
+  const buildAssetMapping = (siteData: CMSSiteData) => {
+    const assetMap = new Map<string, { pathInZip: string; cleanPathInTs: string }>();
+    let count = 1;
+
+    const scan = (obj: any) => {
+      if (!obj) return;
+      if (typeof obj === "string") {
+        const str = obj.trim();
+        if (
+          str.startsWith("data:image/") ||
+          str.startsWith("data:video/") ||
+          str.includes("/uploads/") ||
+          str.startsWith("uploads/")
+        ) {
+          if (!assetMap.has(str)) {
+            let fileName = "";
+            if (str.startsWith("data:")) {
+              const mimeMatch = str.match(/data:(?:image|video)\/([a-zA-Z0-9+-]+);/);
+              let ext = mimeMatch ? (mimeMatch[1] === "svg+xml" ? "svg" : mimeMatch[1]) : "png";
+              if (ext === "jpeg") ext = "jpg";
+              fileName = `uploaded_asset_${count}.${ext}`;
+              count++;
+            } else {
+              fileName = str.split("/").pop() || `uploaded_asset_${count}.png`;
+              count++;
+            }
+            const cleanPathInTs = `src/assets/images/${fileName}`;
+            const pathInZip = `src/assets/images/${fileName}`;
+            assetMap.set(str, { pathInZip, cleanPathInTs });
+          }
+        }
+      } else if (Array.isArray(obj)) {
+        obj.forEach(scan);
+      } else if (typeof obj === "object") {
+        Object.keys(obj).forEach((key) => {
+          if (key === "activityLogs") return;
+          scan(obj[key]);
+        });
+      }
+    };
+
+    scan(siteData);
+    return assetMap;
+  };
+
   // We can scan siteData to discover what images/thumbnails currently exist on the site
   // and dynamically construct the media library gallery, plus add new uploaded files.
   const getDiscoveredMedia = () => {
@@ -939,13 +984,11 @@ export function AdminCMS() {
       });
     });
 
-    // Add any dynamic uploads from logs
-    (data?.activityLogs || []).forEach((log) => {
-      if (log?.details && log.details.includes("/uploads/")) {
-        const match = log.details.match(/\/uploads\/[a-zA-Z0-9.\-_]+/);
-        if (match) mediaSet.add(match[0]);
-      }
-    });
+    // Add any dynamic uploaded files directly present in site data
+    const assetMap = buildAssetMapping(data);
+    for (const [url] of assetMap.entries()) {
+      mediaSet.add(url);
+    }
 
     return Array.from(mediaSet);
   };
@@ -1351,51 +1394,6 @@ export function AdminCMS() {
     showNotification("Downloaded JSON site backup!", "success");
   };
 
-  const buildAssetMapping = (siteData: CMSSiteData) => {
-    const assetMap = new Map<string, { pathInZip: string; cleanPathInTs: string }>();
-    let count = 1;
-
-    const scan = (obj: any) => {
-      if (!obj) return;
-      if (typeof obj === "string") {
-        const str = obj.trim();
-        if (
-          str.startsWith("data:image/") ||
-          str.startsWith("data:video/") ||
-          str.includes("/uploads/") ||
-          str.startsWith("uploads/")
-        ) {
-          if (!assetMap.has(str)) {
-            let fileName = "";
-            if (str.startsWith("data:")) {
-              const mimeMatch = str.match(/data:(?:image|video)\/([a-zA-Z0-9+-]+);/);
-              let ext = mimeMatch ? (mimeMatch[1] === "svg+xml" ? "svg" : mimeMatch[1]) : "png";
-              if (ext === "jpeg") ext = "jpg";
-              fileName = `uploaded_asset_${count}.${ext}`;
-              count++;
-            } else {
-              fileName = str.split("/").pop() || `uploaded_asset_${count}.png`;
-              count++;
-            }
-            const cleanPathInTs = `src/assets/images/${fileName}`;
-            const pathInZip = `src/assets/images/${fileName}`;
-            assetMap.set(str, { pathInZip, cleanPathInTs });
-          }
-        }
-      } else if (Array.isArray(obj)) {
-        obj.forEach(scan);
-      } else if (typeof obj === "object") {
-        Object.keys(obj).forEach((key) => {
-          if (key === "activityLogs") return;
-          scan(obj[key]);
-        });
-      }
-    };
-
-    scan(siteData);
-    return assetMap;
-  };
-
   const handleDownloadDefaultDataTs = () => {
     const assetMap = buildAssetMapping(data);
 
@@ -1469,27 +1467,6 @@ export function AdminCMS() {
       const zip = new JSZip();
 
       const assetMap = buildAssetMapping(data);
-
-      // Also scan server /uploads folder if available
-      try {
-        const res = await fetch("/api/uploads/list");
-        if (res.ok) {
-          const body = await res.json();
-          if (Array.isArray(body.files)) {
-            body.files.forEach((f: string) => {
-              const serverUrl = `/uploads/${f}`;
-              if (!assetMap.has(serverUrl)) {
-                assetMap.set(serverUrl, {
-                  pathInZip: `src/assets/images/${f}`,
-                  cleanPathInTs: `src/assets/images/${f}`,
-                });
-              }
-            });
-          }
-        }
-      } catch (e) {
-        console.warn("Could not list server /uploads folder:", e);
-      }
 
       if (assetMap.size === 0) {
         showNotification("لم يتم العثور على وسائط مرفوعة مخصصة (Base64) بـ CMS لتصديرها.", "info");
