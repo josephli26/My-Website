@@ -24,7 +24,33 @@ function getDbData() {
   if (fs.existsSync(DATA_FILE)) {
     try {
       const raw = fs.readFileSync(DATA_FILE, "utf-8");
-      return JSON.parse(raw);
+      const parsed = JSON.parse(raw);
+      if (parsed && typeof parsed === "object") {
+        return {
+          ...defaultSiteData,
+          ...parsed,
+          settings: {
+            ...defaultSiteData.settings,
+            ...(parsed.settings || {}),
+          },
+          design: {
+            ...defaultSiteData.design,
+            ...(parsed.design || {}),
+            colors: {
+              ...defaultDataColors(defaultSiteData),
+              ...(parsed.design?.colors || {}),
+            },
+          },
+          aboutMe: {
+            ...defaultSiteData.aboutMe,
+            ...(parsed.aboutMe || {}),
+            skills: Array.isArray(parsed.aboutMe?.skills) ? parsed.aboutMe.skills : defaultSiteData.aboutMe?.skills || [],
+          },
+          allProjects: Array.isArray(parsed.allProjects) ? parsed.allProjects : defaultSiteData.allProjects || [],
+          projects: Array.isArray(parsed.projects) ? parsed.projects : defaultSiteData.projects || [],
+          services: Array.isArray(parsed.services) ? parsed.services : defaultSiteData.services || [],
+        };
+      }
     } catch (err) {
       console.error("Server: Failed to parse data.json, returning default snapshot.", err);
     }
@@ -33,6 +59,25 @@ function getDbData() {
   // Seed with default data on first load
   fs.writeFileSync(DATA_FILE, JSON.stringify(defaultSiteData, null, 2), "utf-8");
   return defaultSiteData;
+}
+
+function defaultDataColors(d: typeof defaultSiteData) {
+  return d.design?.colors || {
+    primary: "#8cff2e",
+    background: "#131313",
+    text: "#ffffff",
+    card: "#1a1a1a",
+    footer: "#c8c5ae",
+    accent: "#8cff2e",
+    border: "#262626",
+    buttonBg: "#8cff2e",
+    buttonText: "#131313",
+    mutedText: "#a3a3a3",
+    navBg: "#131313",
+    navText: "#ffffff",
+    badgeBg: "#262626",
+    badgeText: "#8cff2e",
+  };
 }
 
 // Helper to write database

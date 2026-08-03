@@ -17,6 +17,76 @@ interface CMSContextType {
 
 const CMSContext = createContext<CMSContextType | undefined>(undefined);
 
+export function mergeDeepData(serverData: any, defaultData: CMSSiteData): CMSSiteData {
+  if (!serverData || typeof serverData !== "object") return defaultData;
+
+  return {
+    name: serverData.name || defaultData.name,
+    title: serverData.title || defaultData.title,
+    tagline: serverData.tagline || defaultData.tagline,
+    email: serverData.email || defaultData.email,
+    myInfo: serverData.myInfo !== undefined ? serverData.myInfo : defaultData.myInfo,
+    myInfoMobile: serverData.myInfoMobile !== undefined ? serverData.myInfoMobile : defaultData.myInfoMobile,
+    heroImage: serverData.heroImage || defaultData.heroImage,
+    heroImageMobile: serverData.heroImageMobile || defaultData.heroImageMobile,
+    settings: {
+      ...defaultData.settings,
+      ...(serverData.settings || {}),
+    },
+    design: {
+      ...defaultData.design,
+      ...(serverData.design || {}),
+      colors: {
+        ...defaultData.design?.colors,
+        ...(serverData.design?.colors || {}),
+      },
+      typography: {
+        ...defaultData.design?.typography,
+        ...(serverData.design?.typography || {}),
+      },
+      layout: {
+        ...defaultData.design?.layout,
+        ...(serverData.design?.layout || {}),
+      },
+    },
+    aboutMe: {
+      ...defaultData.aboutMe,
+      ...(serverData.aboutMe || {}),
+      skills: Array.isArray(serverData.aboutMe?.skills) ? serverData.aboutMe.skills : defaultData.aboutMe?.skills || [],
+    },
+    allProjects: Array.isArray(serverData.allProjects) ? serverData.allProjects : defaultData.allProjects || [],
+    projects: Array.isArray(serverData.projects) ? serverData.projects : defaultData.projects || [],
+    projectDetails: Array.isArray(serverData.projectDetails) ? serverData.projectDetails : defaultData.projectDetails || [],
+    services: Array.isArray(serverData.services) ? serverData.services : defaultData.services || [],
+    socials: Array.isArray(serverData.socials) ? serverData.socials : defaultData.socials || [],
+    aboutSocials: Array.isArray(serverData.aboutSocials) ? serverData.aboutSocials : Array.isArray(serverData.socials) ? serverData.socials : defaultData.aboutSocials || [],
+    contact: {
+      ...defaultData.contact,
+      ...(serverData.contact || {}),
+    },
+    nav: Array.isArray(serverData.nav) ? serverData.nav : defaultData.nav || [],
+    footer: {
+      ...defaultData.footer,
+      ...(serverData.footer || {}),
+    },
+    showreel: {
+      ...defaultData.showreel,
+      ...(serverData.showreel || {}),
+    },
+    seo: {
+      ...defaultData.seo,
+      ...(serverData.seo || {}),
+      home: { ...defaultData.seo?.home, ...(serverData.seo?.home || {}) },
+      projects: { ...defaultData.seo?.projects, ...(serverData.seo?.projects || {}) },
+      about: { ...defaultData.seo?.about, ...(serverData.seo?.about || {}) },
+    },
+    activityLogs: Array.isArray(serverData.activityLogs) ? serverData.activityLogs : defaultData.activityLogs || [],
+    homeTitles: { ...defaultData.homeTitles, ...(serverData.homeTitles || {}) },
+    homeVisibility: { ...defaultData.homeVisibility, ...(serverData.homeVisibility || {}) },
+    projectCategories: Array.isArray(serverData.projectCategories) ? serverData.projectCategories : defaultData.projectCategories || [],
+  };
+}
+
 export function CMSProvider({ children }: { children: ReactNode }) {
   const [data, setData] = useState<CMSSiteData>(defaultSiteData);
   const [isLoading, setIsLoading] = useState(true);
@@ -41,28 +111,14 @@ export function CMSProvider({ children }: { children: ReactNode }) {
         const res = await fetch("/api/data");
         if (res.ok) {
           const serverData = await res.json();
-          const mergedData = {
-            ...defaultSiteData,
-            ...serverData,
-            myInfo: serverData.myInfo !== undefined ? serverData.myInfo : defaultSiteData.myInfo,
-            myInfoMobile: serverData.myInfoMobile !== undefined ? serverData.myInfoMobile : defaultSiteData.myInfoMobile,
-            aboutSocials: serverData.aboutSocials || defaultSiteData.aboutSocials || serverData.socials || defaultSiteData.socials,
-          };
+          const mergedData = mergeDeepData(serverData, defaultSiteData);
           setData(mergedData);
-          // Sync with local storage too for safety
           localStorage.setItem("cms_portfolio_data", JSON.stringify(mergedData));
         } else {
-          // Fallback to local storage if server endpoint is not ready
           const cached = localStorage.getItem("cms_portfolio_data");
           if (cached) {
             const parsed = JSON.parse(cached);
-            setData({
-              ...defaultSiteData,
-              ...parsed,
-              myInfo: parsed.myInfo !== undefined ? parsed.myInfo : defaultSiteData.myInfo,
-              myInfoMobile: parsed.myInfoMobile !== undefined ? parsed.myInfoMobile : defaultSiteData.myInfoMobile,
-              aboutSocials: parsed.aboutSocials || defaultSiteData.aboutSocials || parsed.socials || defaultSiteData.socials,
-            });
+            setData(mergeDeepData(parsed, defaultSiteData));
           } else {
             setData(defaultSiteData);
           }
@@ -71,14 +127,12 @@ export function CMSProvider({ children }: { children: ReactNode }) {
         console.warn("CMS: Failed to fetch server data, using localStorage/default fallback.", err);
         const cached = localStorage.getItem("cms_portfolio_data");
         if (cached) {
-          const parsed = JSON.parse(cached);
-          setData({
-            ...defaultSiteData,
-            ...parsed,
-            myInfo: parsed.myInfo !== undefined ? parsed.myInfo : defaultSiteData.myInfo,
-            myInfoMobile: parsed.myInfoMobile !== undefined ? parsed.myInfoMobile : defaultSiteData.myInfoMobile,
-            aboutSocials: parsed.aboutSocials || defaultSiteData.aboutSocials || parsed.socials || defaultSiteData.socials,
-          });
+          try {
+            const parsed = JSON.parse(cached);
+            setData(mergeDeepData(parsed, defaultSiteData));
+          } catch (e) {
+            setData(defaultSiteData);
+          }
         } else {
           setData(defaultSiteData);
         }
@@ -312,6 +366,20 @@ export function CMSProvider({ children }: { children: ReactNode }) {
       console.warn("CMS: Failed to clear localStorage item", e);
     }
     setData(defaultSiteData);
+
+    try {
+      await fetch("/api/data", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${getAuthToken()}`,
+        },
+        body: JSON.stringify(defaultSiteData),
+      });
+    } catch (err) {
+      console.warn("CMS: Server endpoint save on reset failed.", err);
+    }
+
     return true;
   };
 

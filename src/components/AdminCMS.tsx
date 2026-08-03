@@ -1763,19 +1763,19 @@ export function AdminCMS() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                   <div className="bg-neutral-950/40 border border-white/5 p-5 rounded-2xl">
                     <span className="text-[10px] text-neutral-400 font-bold uppercase tracking-wider">Total Works</span>
-                    <p className="text-3xl font-bold font-mono text-brand-green mt-1">{data.allProjects.length}</p>
+                    <p className="text-3xl font-bold font-mono text-brand-green mt-1">{(data?.allProjects || []).length}</p>
                   </div>
                   <div className="bg-neutral-950/40 border border-white/5 p-5 rounded-2xl">
                     <span className="text-[10px] text-neutral-400 font-bold uppercase tracking-wider">Featured Slides</span>
-                    <p className="text-3xl font-bold font-mono text-brand-green mt-1">{data.projects.length}</p>
+                    <p className="text-3xl font-bold font-mono text-brand-green mt-1">{(data?.projects || []).length}</p>
                   </div>
                   <div className="bg-neutral-950/40 border border-white/5 p-5 rounded-2xl">
                     <span className="text-[10px] text-neutral-400 font-bold uppercase tracking-wider">Toolbox Techs</span>
-                    <p className="text-3xl font-bold font-mono text-brand-green mt-1">{data.aboutMe.skills.length}</p>
+                    <p className="text-3xl font-bold font-mono text-brand-green mt-1">{(data?.aboutMe?.skills || []).length}</p>
                   </div>
                   <div className="bg-neutral-950/40 border border-white/5 p-5 rounded-2xl">
                     <span className="text-[10px] text-neutral-400 font-bold uppercase tracking-wider">Expertises</span>
-                    <p className="text-3xl font-bold font-mono text-brand-green mt-1">{data.services.length}</p>
+                    <p className="text-3xl font-bold font-mono text-brand-green mt-1">{(data?.services || []).length}</p>
                   </div>
                 </div>
 

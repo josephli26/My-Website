@@ -8,6 +8,7 @@ import { AboutView } from "./components/AboutView";
 import { VideoModal } from "./components/VideoModal";
 import { AdminLogin } from "./components/AdminLogin";
 import { AdminCMS } from "./components/AdminCMS";
+import { CMSErrorBoundary } from "./components/CMSErrorBoundary";
 import { useCMS } from "./context/CMSContext";
 import { motion, AnimatePresence, useScroll, useSpring, useTransform } from "motion/react";
 
@@ -154,28 +155,55 @@ export default function App() {
 
   // Check if we are in the secret admin area
   if (currentView === "admin") {
-    return isAdmin ? <AdminCMS /> : <AdminLogin />;
+    return isAdmin ? (
+      <CMSErrorBoundary>
+        <AdminCMS />
+      </CMSErrorBoundary>
+    ) : (
+      <AdminLogin />
+    );
   }
 
   // Construct dynamic design variables
-  const design = data.design;
+  const colors = data?.design?.colors || {
+    primary: "#8cff2e",
+    background: "#131313",
+    text: "#ffffff",
+    card: "#1a1a1a",
+    footer: "#c8c5ae",
+    accent: "#8cff2e",
+    border: "#262626",
+    buttonBg: "#8cff2e",
+    buttonText: "#131313",
+    mutedText: "#a3a3a3",
+    navBg: "#131313",
+    navText: "#ffffff",
+    badgeBg: "#262626",
+    badgeText: "#8cff2e",
+  };
+
+  const typography = data?.design?.typography || {
+    headingFont: "Bebas Neue",
+    bodyFont: "Space Grotesk",
+  };
+
   const styleVars = {
-    "--brand-green": design.colors.primary || "#8cff2e",
-    "--brand-black": design.colors.background || "#131313",
-    "--brand-white": design.colors.text || "#ffffff",
-    "--brand-card": design.colors.card || "#1a1a1a",
-    "--brand-footer": design.colors.footer || "#c8c5ae",
-    "--brand-accent": design.colors.accent || design.colors.primary || "#8cff2e",
-    "--brand-border": design.colors.border || "#262626",
-    "--brand-button-bg": design.colors.buttonBg || design.colors.primary || "#8cff2e",
-    "--brand-button-text": design.colors.buttonText || "#131313",
-    "--brand-muted": design.colors.mutedText || "#a3a3a3",
-    "--brand-nav-bg": design.colors.navBg || design.colors.background || "#131313",
-    "--brand-nav-text": design.colors.navText || design.colors.text || "#ffffff",
-    "--brand-badge-bg": design.colors.badgeBg || "#262626",
-    "--brand-badge-text": design.colors.badgeText || design.colors.primary || "#8cff2e",
-    "--font-bebas": `"${design.typography.headingFont}", sans-serif`,
-    "--font-grotesk": `"${design.typography.bodyFont}", sans-serif`,
+    "--brand-green": colors.primary || "#8cff2e",
+    "--brand-black": colors.background || "#131313",
+    "--brand-white": colors.text || "#ffffff",
+    "--brand-card": colors.card || "#1a1a1a",
+    "--brand-footer": colors.footer || "#c8c5ae",
+    "--brand-accent": colors.accent || colors.primary || "#8cff2e",
+    "--brand-border": colors.border || "#262626",
+    "--brand-button-bg": colors.buttonBg || colors.primary || "#8cff2e",
+    "--brand-button-text": colors.buttonText || "#131313",
+    "--brand-muted": colors.mutedText || "#a3a3a3",
+    "--brand-nav-bg": colors.navBg || colors.background || "#131313",
+    "--brand-nav-text": colors.navText || colors.text || "#ffffff",
+    "--brand-badge-bg": colors.badgeBg || "#262626",
+    "--brand-badge-text": colors.badgeText || colors.primary || "#8cff2e",
+    "--font-bebas": `"${typography.headingFont || "Bebas Neue"}", sans-serif`,
+    "--font-grotesk": `"${typography.bodyFont || "Space Grotesk"}", sans-serif`,
   } as React.CSSProperties;
 
   return (
