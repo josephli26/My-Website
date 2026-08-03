@@ -93,7 +93,7 @@ export function ImageFallback({
       // Return a clean text-logo SVG if logo fails
       return (
         <span className={className}>
-          YA.
+          YA
         </span>
       );
     }

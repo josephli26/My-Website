@@ -162,6 +162,19 @@ app.post("/api/upload", verifyAdminAuth, upload.single("file"), (req, res) => {
   }
 });
 
+// 5. List Uploaded Files
+app.get("/api/uploads/list", (req, res) => {
+  try {
+    if (!fs.existsSync(UPLOADS_DIR)) {
+      return res.json({ files: [] });
+    }
+    const files = fs.readdirSync(UPLOADS_DIR);
+    res.json({ files });
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 /* ══════════════════════════════════════════
      VITE MIDDLEWARE / SPA SERVING
    ══════════════════════════════════════════ */

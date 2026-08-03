@@ -33,7 +33,9 @@ import {
   CheckSquare,
   AlertCircle,
   Edit2,
-  Tag
+  Tag,
+  FolderDown,
+  Loader2
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -1349,8 +1351,77 @@ export function AdminCMS() {
     showNotification("Downloaded JSON site backup!", "success");
   };
 
+  const buildAssetMapping = (siteData: CMSSiteData) => {
+    const assetMap = new Map<string, { pathInZip: string; cleanPathInTs: string }>();
+    let count = 1;
+
+    const scan = (obj: any) => {
+      if (!obj) return;
+      if (typeof obj === "string") {
+        const str = obj.trim();
+        if (
+          str.startsWith("data:image/") ||
+          str.startsWith("data:video/") ||
+          str.includes("/uploads/") ||
+          str.startsWith("uploads/")
+        ) {
+          if (!assetMap.has(str)) {
+            let fileName = "";
+            if (str.startsWith("data:")) {
+              const mimeMatch = str.match(/data:(?:image|video)\/([a-zA-Z0-9+-]+);/);
+              let ext = mimeMatch ? (mimeMatch[1] === "svg+xml" ? "svg" : mimeMatch[1]) : "png";
+              if (ext === "jpeg") ext = "jpg";
+              fileName = `uploaded_asset_${count}.${ext}`;
+              count++;
+            } else {
+              fileName = str.split("/").pop() || `uploaded_asset_${count}.png`;
+              count++;
+            }
+            const cleanPathInTs = `src/assets/images/${fileName}`;
+            const pathInZip = `src/assets/images/${fileName}`;
+            assetMap.set(str, { pathInZip, cleanPathInTs });
+          }
+        }
+      } else if (Array.isArray(obj)) {
+        obj.forEach(scan);
+      } else if (typeof obj === "object") {
+        Object.keys(obj).forEach((key) => {
+          if (key === "activityLogs") return;
+          scan(obj[key]);
+        });
+      }
+    };
+
+    scan(siteData);
+    return assetMap;
+  };
+
   const handleDownloadDefaultDataTs = () => {
-    const fileContent = `import { CMSSiteData } from "./types/cms";\n\nexport const defaultSiteData: CMSSiteData = ${JSON.stringify(data, null, 2)};\n`;
+    const assetMap = buildAssetMapping(data);
+
+    const cleanObject = (obj: any): any => {
+      if (!obj) return obj;
+      if (typeof obj === "string") {
+        const str = obj.trim();
+        if (assetMap.has(str)) {
+          return assetMap.get(str)!.cleanPathInTs;
+        }
+        return obj;
+      } else if (Array.isArray(obj)) {
+        return obj.map(cleanObject);
+      } else if (typeof obj === "object") {
+        const result: Record<string, any> = {};
+        Object.keys(obj).forEach((key) => {
+          if (key === "activityLogs") return;
+          result[key] = cleanObject(obj[key]);
+        });
+        return result;
+      }
+      return obj;
+    };
+
+    const cleanData = cleanObject(data);
+    const fileContent = `import { CMSSiteData } from "./types/cms";\n\nexport const defaultSiteData: CMSSiteData = ${JSON.stringify(cleanData, null, 2)};\n`;
     const blob = new Blob([fileContent], { type: "text/typescript" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -1359,7 +1430,8 @@ export function AdminCMS() {
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-    showNotification("Downloaded defaultData.ts file for GitHub!", "success");
+    URL.revokeObjectURL(url);
+    showNotification("تم تحميل ملف defaultData.ts النظيف (مفصول عن Base64 وموجه لـ src/assets/images) بنجاح!", "success");
   };
 
   const handleResetData = async () => {
@@ -1383,6 +1455,102 @@ export function AdminCMS() {
       setTimeout(() => {
         clearAllSiteStorage();
       }, 400);
+    }
+  };
+
+  const [isZippingAssets, setIsZippingAssets] = useState(false);
+
+  const handleDownloadAssetsZip = async () => {
+    setIsZippingAssets(true);
+    showNotification("جاري تجميع الصور والـ GIFs المرفوعة إلى مجلد src/assets/images في ملف ZIP...", "info");
+
+    try {
+      const JSZip = (await import("jszip")).default;
+      const zip = new JSZip();
+
+      const assetMap = buildAssetMapping(data);
+
+      // Also scan server /uploads folder if available
+      try {
+        const res = await fetch("/api/uploads/list");
+        if (res.ok) {
+          const body = await res.json();
+          if (Array.isArray(body.files)) {
+            body.files.forEach((f: string) => {
+              const serverUrl = `/uploads/${f}`;
+              if (!assetMap.has(serverUrl)) {
+                assetMap.set(serverUrl, {
+                  pathInZip: `src/assets/images/${f}`,
+                  cleanPathInTs: `src/assets/images/${f}`,
+                });
+              }
+            });
+          }
+        }
+      } catch (e) {
+        console.warn("Could not list server /uploads folder:", e);
+      }
+
+      if (assetMap.size === 0) {
+        showNotification("لم يتم العثور على وسائط مرفوعة مخصصة (Base64) بـ CMS لتصديرها.", "info");
+        setIsZippingAssets(false);
+        return;
+      }
+
+      let successCount = 0;
+      const manifest: Record<string, string> = {};
+
+      for (const [assetUrl, meta] of assetMap.entries()) {
+        try {
+          if (assetUrl.startsWith("data:")) {
+            const parts = assetUrl.split(",");
+            if (parts.length === 2) {
+              const base64Data = parts[1];
+              zip.file(meta.pathInZip, base64Data, { base64: true });
+              manifest[meta.pathInZip] = "Base64 Asset";
+              successCount++;
+            }
+          } else {
+            const targetUrl = fixAssetUrl(assetUrl);
+            const response = await fetch(targetUrl);
+            if (response.ok) {
+              const blob = await response.blob();
+              zip.file(meta.pathInZip, blob);
+              manifest[meta.pathInZip] = assetUrl;
+              successCount++;
+            }
+          }
+        } catch (err) {
+          console.warn(`Failed to bundle asset ${assetUrl}:`, err);
+        }
+      }
+
+      zip.file(
+        "README_INSTRUCTIONS.txt",
+        `تعليمات الاستخدام لقاعدة بيانات GitHub:
+=======================================
+1. قم بفك ضغط هذا الملف ZIP داخل مجلد مشروعك على الكمبيوتر (المجلد الرئيسي للمشروع).
+2. سيتم نقل جميع الصور والـ GIFs المرفوعة تلقائياً إلى المسار الخاص بك: src/assets/images/
+3. قم بنسخ ملف defaultData.ts المُنزل ومستخرج من CMS وضعه في مجلد src/defaultData.ts
+4. ارفع التغييرات إلى GitHub بكل سهولة وبحجم ملف صغير جداً!`
+      );
+
+      const content = await zip.generateAsync({ type: "blob" });
+      const downloadUrl = URL.createObjectURL(content);
+      const link = document.createElement("a");
+      link.href = downloadUrl;
+      link.download = `cms-src-assets-images-${new Date().toISOString().slice(0, 10)}.zip`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(downloadUrl);
+
+      showNotification(`تم حفظ ${successCount} صور و GIFs داخل ZIP في المجلد src/assets/images/`, "success");
+    } catch (error) {
+      console.error("Error creating assets zip archive:", error);
+      showNotification("حدث خطأ أثناء إنشاء ملف ZIP للوسائط.", "error");
+    } finally {
+      setIsZippingAssets(false);
     }
   };
 
@@ -1530,6 +1698,16 @@ export function AdminCMS() {
 
           <div className="flex items-center gap-3">
             <button
+              onClick={handleDownloadAssetsZip}
+              disabled={isZippingAssets}
+              title="تحميل جميع الصور والـ GIFs المرفوعة في CMS في ملف ZIP واحد لنقلها إلى Github بسهولة"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-blue-500/40 hover:border-blue-400 text-[10px] text-blue-400 hover:text-blue-300 tracking-widest uppercase font-bold transition-all cursor-pointer bg-blue-950/30 shadow-sm disabled:opacity-50"
+            >
+              {isZippingAssets ? <Loader2 size={12} className="animate-spin" /> : <FolderDown size={12} />}
+              DOWNLOAD ASSETS ZIP
+            </button>
+
+            <button
               onClick={handleClearSiteData}
               title="مسح جميع بيانات الموقع والتخزين المؤقت بالكامل (Clear Site Data & LocalStorage & Caches)"
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-amber-500/40 hover:border-amber-400 text-[10px] text-amber-400 hover:text-amber-300 tracking-widest uppercase font-bold transition-all cursor-pointer bg-amber-950/30 shadow-sm"
@@ -1621,6 +1799,16 @@ export function AdminCMS() {
                       >
                         <FileText size={14} />
                         DOWNLOAD defaultData.ts (FOR GITHUB)
+                      </button>
+
+                      <button
+                        onClick={handleDownloadAssetsZip}
+                        disabled={isZippingAssets}
+                        className="w-full bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/40 hover:border-blue-400 text-blue-400 text-xs font-bold uppercase tracking-widest py-3 rounded-xl flex items-center justify-center gap-2 cursor-pointer transition-all shadow-md disabled:opacity-50"
+                        title="تجميع وتحميل جميع الصور والـ GIFs المرفوعة في CMS في أرشيف ZIP جاهز لنقله لمشروع GitHub"
+                      >
+                        {isZippingAssets ? <Loader2 size={14} className="animate-spin" /> : <FolderDown size={14} />}
+                        DOWNLOAD MEDIA ASSETS (ZIP) (تحميل الصور والـ GIFs)
                       </button>
 
                       <button
