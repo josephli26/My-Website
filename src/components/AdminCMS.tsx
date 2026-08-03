@@ -926,22 +926,22 @@ export function AdminCMS() {
     mediaSet.add("/src/assets/images/showreel-Thumbnail.png");
 
     // Add projects images
-    data.projects.forEach((p) => {
-      if (p.thumbnail) mediaSet.add(p.thumbnail);
+    (data?.projects || []).forEach((p) => {
+      if (p?.thumbnail) mediaSet.add(p.thumbnail);
     });
-    data.allProjects.forEach((p) => {
-      if (p.thumbnail) mediaSet.add(p.thumbnail);
+    (data?.allProjects || []).forEach((p) => {
+      if (p?.thumbnail) mediaSet.add(p.thumbnail);
     });
-    data.projectDetails.forEach((d) => {
-      if (d.heroImage) mediaSet.add(d.heroImage);
-      d.sections.forEach((s) => {
-        s.images.forEach((img) => mediaSet.add(img));
+    (data?.projectDetails || []).forEach((d) => {
+      if (d?.heroImage) mediaSet.add(d.heroImage);
+      (d?.sections || []).forEach((s) => {
+        (s?.images || []).forEach((img) => mediaSet.add(img));
       });
     });
 
     // Add any dynamic uploads from logs
-    data.activityLogs.forEach((log) => {
-      if (log.details && log.details.includes("/uploads/")) {
+    (data?.activityLogs || []).forEach((log) => {
+      if (log?.details && log.details.includes("/uploads/")) {
         const match = log.details.match(/\/uploads\/[a-zA-Z0-9.\-_]+/);
         if (match) mediaSet.add(match[0]);
       }
@@ -1112,7 +1112,7 @@ export function AdminCMS() {
   };
 
   const startCreateProject = () => {
-    const newId = Math.max(...data.allProjects.map((p) => p.id), 0) + 1;
+    const newId = Math.max(...(data?.allProjects || []).map((p) => p.id), 0) + 1;
     const defaultCat = (data.projectCategories && data.projectCategories.length > 0)
       ? data.projectCategories[0]
       : "Explainer";
@@ -1249,11 +1249,11 @@ export function AdminCMS() {
   };
 
   const handleDuplicateProject = async (id: number) => {
-    const srcBrief = data.allProjects.find((p) => p.id === id);
-    const srcDetail = data.projectDetails.find((p) => p.id === id);
+    const srcBrief = (data?.allProjects || []).find((p) => p.id === id);
+    const srcDetail = (data?.projectDetails || []).find((p) => p.id === id);
     if (!srcBrief) return;
 
-    const newId = Math.max(...data.allProjects.map((p) => p.id), 0) + 1;
+    const newId = Math.max(...(data?.allProjects || []).map((p) => p.id), 0) + 1;
     const title = `${srcBrief.title} (Copy)`;
 
     await updateData(
