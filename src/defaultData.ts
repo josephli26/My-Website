@@ -120,6 +120,30 @@ export const defaultSiteData: CMSSiteData = {
       "link": "https://www.youtube.com/",
       "hoverGif": "src/assets/images/upload-1785782808567-351401186.gif",
       "isPublished": true
+    },
+    {
+      "id": 3,
+      "title": "COMÈTE STUDIO - FROM STATIC FRAMES TO LIVING STORIES",
+      "category": "Explainer",
+      "categories": [
+        "Explainer"
+      ],
+      "thumbnail": "src/assets/images/upload-1785853224498-86222168.jpg",
+      "link": "#",
+      "hoverGif": "src/assets/images/upload-1785853203742-812633899.gif",
+      "isPublished": true
+    },
+    {
+      "id": 4,
+      "title": "WORKLEAP - GATHERING SPRING 2026",
+      "category": "Explainer",
+      "categories": [
+        "Explainer"
+      ],
+      "thumbnail": "src/assets/images/upload-1785854672920-266969792.jpg",
+      "link": "#",
+      "hoverGif": "src/assets/images/upload-1785856060404-200388656.gif",
+      "isPublished": true
     }
   ],
   "projects": [],
@@ -296,6 +320,278 @@ export const defaultSiteData: CMSSiteData = {
       ],
       "behanceLink": "https://behance.net",
       "externalLink": "#"
+    },
+    {
+      "id": 3,
+      "title": "COMÈTE STUDIO - FROM STATIC FRAMES TO LIVING STORIES",
+      "shortDescription": "This creative collaboration with the prestigious Comète Studio in Montreal was established to produce a conceptual narrative video showcasing the studio's high artistic quality. \nThe video tells an inspiring visual story about the journey of transforming complex social issues and dry topics into captivating visual content and artwork that leaves a profound impact.",
+      "heroImage": "src/assets/images/upload-1785853228719-128438461.jpg",
+      "role": "ANIMATION",
+      "client": "COMETE STUDIO",
+      "description": "My role was to breathe life into these illustrations, transforming them from static frames into a kinetic journey that serves the psychological and narrative meaning of each scene.",
+      "videoUrl": "https://youtu.be/Aa_z4AmVm4k?si=Ivc-jpMqEooPbtaM",
+      "categories": [
+        "Explainer"
+      ],
+      "sections": [
+        {
+          "type": "grid",
+          "label": "",
+          "images": [
+            "src/assets/images/upload-1785853393101-539316861.gif",
+            "src/assets/images/upload-1785853393422-610566284.gif",
+            "src/assets/images/upload-1785853394608-457299040.gif",
+            "src/assets/images/upload-1785853618160-505870872.gif"
+          ],
+          "rows": [
+            {
+              "id": "row-1",
+              "images": [
+                "src/assets/images/upload-1785853393101-539316861.gif",
+                "src/assets/images/upload-1785853393422-610566284.gif"
+              ]
+            },
+            {
+              "id": "row-1785853414490",
+              "images": [
+                "src/assets/images/upload-1785853394608-457299040.gif",
+                "src/assets/images/upload-1785853618160-505870872.gif"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "label": "DESIGN",
+          "images": [
+            "src/assets/images/upload-1785853709545-496136979.jpg",
+            "src/assets/images/upload-1785853709706-342767079.jpg",
+            "src/assets/images/upload-1785853709868-143450027.jpg",
+            "src/assets/images/upload-1785853710044-650868635.jpg",
+            "src/assets/images/upload-1785853710197-345311505.jpg",
+            "src/assets/images/upload-1785853710279-589467455.jpg"
+          ],
+          "rows": [
+            {
+              "id": "row-1",
+              "images": [
+                "src/assets/images/upload-1785853709545-496136979.jpg",
+                "src/assets/images/upload-1785853709706-342767079.jpg",
+                "src/assets/images/upload-1785853709868-143450027.jpg"
+              ]
+            },
+            {
+              "id": "row-1785853749903",
+              "images": [
+                "src/assets/images/upload-1785853710044-650868635.jpg",
+                "src/assets/images/upload-1785853710197-345311505.jpg",
+                "src/assets/images/upload-1785853710279-589467455.jpg"
+              ]
+            }
+          ]
+        }
+      ],
+      "date": "2024",
+      "softwareUsed": [
+        "After Effects",
+        "Illustrator"
+      ],
+      "behanceLink": "https://behance.net",
+      "externalLink": "#",
+      "customFields": [
+        {
+          "id": "field-role",
+          "label": "ROLE",
+          "value": "ANIMATION"
+        },
+        {
+          "id": "field-client",
+          "label": "CLIENT ",
+          "value": "Comete Studio"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "WORKLEAP - GATHERING SPRING 2026",
+      "shortDescription": "Workleap is a leading Canadian software company building digital tools to enhance employee productivity and happiness\n\nAs a remote-first team, they hold their largest annual in-person event, Workleap Gathering Spring 2026, to bring employees together in person to connect, share their 2026 strategic vision, celebrate innovation, and strengthen team bonds.",
+      "heroImage": "src/assets/images/upload-1785856111844-250000542.jpg",
+      "role": "ANIMATION",
+      "client": "WORKLEAP",
+      "description": "My role was to breathe life into these illustrations, transforming them from static frames into a kinetic journey that serves the psychological and narrative meaning of each scene.",
+      "videoUrl": "https://youtu.be/gmakfULu9PQ?si=uNk6cPZsHgZOjQjs",
+      "categories": [
+        "Explainer"
+      ],
+      "sections": [
+        {
+          "type": "grid",
+          "label": "",
+          "images": [
+            "src/assets/images/upload-1785854192697-850189339.gif",
+            "src/assets/images/upload-1785854192966-34330401.gif",
+            "src/assets/images/upload-1785854193325-636669570.gif",
+            "src/assets/images/upload-1785854205232-646074421.gif",
+            "src/assets/images/upload-1785854205512-962735766.gif",
+            "src/assets/images/upload-1785854205825-145631130.gif"
+          ],
+          "rows": [
+            {
+              "id": "row-1",
+              "images": [
+                "src/assets/images/upload-1785854192697-850189339.gif",
+                "src/assets/images/upload-1785854192966-34330401.gif",
+                "src/assets/images/upload-1785854193325-636669570.gif"
+              ]
+            },
+            {
+              "id": "row-1785853414490",
+              "images": [
+                "src/assets/images/upload-1785854205232-646074421.gif",
+                "src/assets/images/upload-1785854205512-962735766.gif",
+                "src/assets/images/upload-1785854205825-145631130.gif"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "label": "SPHERE PROJECTION BLUEPRINT",
+          "images": [
+            "src/assets/images/upload-1785854582990-669674687.png",
+            "src/assets/images/upload-1785854583202-968041747.png",
+            "src/assets/images/upload-1785854583437-361022115.png"
+          ],
+          "rows": [
+            {
+              "id": "row-1",
+              "images": [
+                "src/assets/images/upload-1785854582990-669674687.png",
+                "src/assets/images/upload-1785854583202-968041747.png",
+                "src/assets/images/upload-1785854583437-361022115.png"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "label": "DESIGN",
+          "images": [
+            "src/assets/images/upload-1785854742887-408923678.jpg",
+            "src/assets/images/upload-1785854743105-794728029.jpg",
+            "src/assets/images/upload-1785854743334-914860998.jpg",
+            "src/assets/images/upload-1785854743587-283134867.jpg",
+            "src/assets/images/upload-1785854761899-252991782.jpg",
+            "src/assets/images/upload-1785854762125-472951704.jpg",
+            "src/assets/images/upload-1785854762349-934392195.jpg",
+            "src/assets/images/upload-1785854762546-637712146.jpg",
+            "src/assets/images/upload-1785854772523-733979190.jpg",
+            "src/assets/images/upload-1785854837193-536431283.jpg",
+            "src/assets/images/upload-1785854837504-149662538.jpg",
+            "src/assets/images/upload-1785854853458-314806700.jpg",
+            "src/assets/images/upload-1785854911950-393237208.jpg",
+            "src/assets/images/upload-1785854912092-606130758.jpg",
+            "src/assets/images/upload-1785854912264-43100113.jpg",
+            "src/assets/images/upload-1785854912405-764961639.jpg",
+            "src/assets/images/upload-1785854949497-298746886.jpg",
+            "src/assets/images/upload-1785854949707-790802034.jpg",
+            "src/assets/images/upload-1785854949919-169147215.jpg",
+            "src/assets/images/upload-1785854950067-975914251.jpg",
+            "src/assets/images/upload-1785854999643-971377988.jpg",
+            "src/assets/images/upload-1785854999840-635751920.jpg",
+            "src/assets/images/upload-1785855000067-126267609.jpg",
+            "src/assets/images/upload-1785855000283-141721088.jpg",
+            "src/assets/images/upload-1785855088730-478425204.jpg",
+            "src/assets/images/upload-1785855089003-460948248.jpg",
+            "src/assets/images/upload-1785855089236-122570960.jpg",
+            "src/assets/images/upload-1785855089540-182966441.jpg"
+          ],
+          "rows": [
+            {
+              "id": "row-1",
+              "images": [
+                "src/assets/images/upload-1785854742887-408923678.jpg",
+                "src/assets/images/upload-1785854743105-794728029.jpg",
+                "src/assets/images/upload-1785854743334-914860998.jpg",
+                "src/assets/images/upload-1785854743587-283134867.jpg"
+              ]
+            },
+            {
+              "id": "row-1785854754449",
+              "images": [
+                "src/assets/images/upload-1785854761899-252991782.jpg",
+                "src/assets/images/upload-1785854762125-472951704.jpg",
+                "src/assets/images/upload-1785854762349-934392195.jpg",
+                "src/assets/images/upload-1785854762546-637712146.jpg"
+              ]
+            },
+            {
+              "id": "row-1785854764054",
+              "images": [
+                "src/assets/images/upload-1785854772523-733979190.jpg",
+                "src/assets/images/upload-1785854837193-536431283.jpg",
+                "src/assets/images/upload-1785854837504-149662538.jpg",
+                "src/assets/images/upload-1785854853458-314806700.jpg"
+              ]
+            },
+            {
+              "id": "row-1785854885954",
+              "images": [
+                "src/assets/images/upload-1785854911950-393237208.jpg",
+                "src/assets/images/upload-1785854912092-606130758.jpg",
+                "src/assets/images/upload-1785854912264-43100113.jpg",
+                "src/assets/images/upload-1785854912405-764961639.jpg"
+              ]
+            },
+            {
+              "id": "row-1785854941339",
+              "images": [
+                "src/assets/images/upload-1785854949497-298746886.jpg",
+                "src/assets/images/upload-1785854949707-790802034.jpg",
+                "src/assets/images/upload-1785854949919-169147215.jpg",
+                "src/assets/images/upload-1785854950067-975914251.jpg"
+              ]
+            },
+            {
+              "id": "row-1785854991584",
+              "images": [
+                "src/assets/images/upload-1785854999643-971377988.jpg",
+                "src/assets/images/upload-1785854999840-635751920.jpg",
+                "src/assets/images/upload-1785855000067-126267609.jpg",
+                "src/assets/images/upload-1785855000283-141721088.jpg"
+              ]
+            },
+            {
+              "id": "row-1785854992031",
+              "images": [
+                "src/assets/images/upload-1785855088730-478425204.jpg",
+                "src/assets/images/upload-1785855089003-460948248.jpg",
+                "src/assets/images/upload-1785855089236-122570960.jpg",
+                "src/assets/images/upload-1785855089540-182966441.jpg"
+              ]
+            }
+          ]
+        }
+      ],
+      "date": "2024",
+      "softwareUsed": [
+        "After Effects",
+        "Illustrator"
+      ],
+      "behanceLink": "https://behance.net",
+      "externalLink": "#",
+      "customFields": [
+        {
+          "id": "field-role",
+          "label": "ROLE",
+          "value": "ANIMATION"
+        },
+        {
+          "id": "field-client",
+          "label": "CLIENT ",
+          "value": "Workleap"
+        }
+      ]
     }
   ],
   "services": [
