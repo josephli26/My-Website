@@ -153,7 +153,7 @@ export const defaultSiteData: CMSSiteData = {
       "title": "247 MAINTENANCE - CONNECTING HOMES TO EXPERTS",
       "shortDescription": "247 MAINTENANCE IS A SMART APP THAT CONNECTS YOU WITH EXPERT TECHNICIANS FOR ALL YOUR HOME NEEDS ANYWHERE IN THE UNITED ARAB EMIRATES.",
       "heroImage": "src/assets/images/upload-1785782936684-906719297.png",
-      "role": "STORYBOARD, ILLUSTRATION, ANIMATION & SFX",
+      "role": "STORYBOARD, ILLUSTRATION\nANIMATION & SFX",
       "client": "247 MAINTENANCE",
       "description": "247 MAINTENANCE IS A SMART APP THAT CONNECTS YOU WITH EXPERT TECHNICIANS FOR ALL YOUR HOME NEEDS ANYWHERE IN THE UNITED ARAB EMIRATES.",
       "videoUrl": "https://youtu.be/4u_Oq_YKyfQ?si=3OajOLO0uZ-bQmQV",
@@ -246,14 +246,26 @@ export const defaultSiteData: CMSSiteData = {
         "Illustrator"
       ],
       "behanceLink": "https://behance.net",
-      "externalLink": "#"
+      "externalLink": "#",
+      "customFields": [
+        {
+          "id": "field-role",
+          "label": "ROLE",
+          "value": "STORYBOARD, ILLUSTRATION\nANIMATION & SFX"
+        },
+        {
+          "id": "field-client",
+          "label": "CLIENT",
+          "value": "247 MAINTENANCE"
+        }
+      ]
     },
     {
       "id": 2,
       "title": "SHOWREEL 2025",
       "shortDescription": "Motion is more than movement; it’s intention, timing, and emotion. I craft motion design that communicates clearly, guides the viewer’s eye, and leaves a lasting impact. \nThis showreel represents my journey, my growth, and my passion for bringing ideas to life.",
       "heroImage": "src/assets/images/upload-1785784162870-900694145.jpg",
-      "role": "STORYBOARD, ILLUSTRATION, ANIMATION & SFX",
+      "role": "STORYBOARD, ILLUSTRATION\nANIMATION & SFX",
       "client": "#",
       "description": "",
       "videoUrl": "https://vimeo.com/1153984527?fl=pl&fe=sh",
@@ -319,7 +331,14 @@ export const defaultSiteData: CMSSiteData = {
         "Illustrator"
       ],
       "behanceLink": "https://behance.net",
-      "externalLink": "#"
+      "externalLink": "#",
+      "customFields": [
+        {
+          "id": "field-role",
+          "label": "ROLE",
+          "value": "STORYBOARD, ILLUSTRATION\nANIMATION & SFX"
+        }
+      ]
     },
     {
       "id": 3,
