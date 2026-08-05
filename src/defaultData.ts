@@ -482,6 +482,26 @@ export const defaultSiteData: CMSSiteData = {
           "type": "grid",
           "label": "",
           "images": [
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/Video-Client.Reaction.mp4"
+          ],
+          "rows": [
+            {
+              "id": "row-1",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/Video-Client.Reaction.mp4"
+              ],
+              "gifModes": {
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/Client.Reaction.mp4": false,
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/Video-Client.Reaction.mp4": true
+              },
+              "singleImageColumns": 1
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "label": "",
+          "images": [
             "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/Video.As.Gif.-1.mp4",
             "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/Video.As.Gif.-2.mp4",
             "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/Video.As.Gif.-3.mp4"
@@ -522,17 +542,17 @@ export const defaultSiteData: CMSSiteData = {
           "type": "grid",
           "label": "SPHERE PROJECTION BLUEPRINT",
           "images": [
-            "src/assets/images/upload-1785854582990-669674687.png",
-            "src/assets/images/upload-1785854583202-968041747.png",
-            "src/assets/images/upload-1785854583437-361022115.png"
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/Sphere.Projection.Blueprint.1.png",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/Sphere.Projection.Blueprint.2.png",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/Sphere.Projection.Blueprint.3.png"
           ],
           "rows": [
             {
               "id": "row-1",
               "images": [
-                "src/assets/images/upload-1785854582990-669674687.png",
-                "src/assets/images/upload-1785854583202-968041747.png",
-                "src/assets/images/upload-1785854583437-361022115.png"
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/Sphere.Projection.Blueprint.1.png",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/Sphere.Projection.Blueprint.2.png",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/Sphere.Projection.Blueprint.3.png"
               ]
             }
           ]
@@ -541,97 +561,110 @@ export const defaultSiteData: CMSSiteData = {
           "type": "grid",
           "label": "DESIGN",
           "images": [
-            "src/assets/images/upload-1785854742887-408923678.jpg",
-            "src/assets/images/upload-1785854743105-794728029.jpg",
-            "src/assets/images/upload-1785854743334-914860998.jpg",
-            "src/assets/images/upload-1785854743587-283134867.jpg",
-            "src/assets/images/upload-1785854761899-252991782.jpg",
-            "src/assets/images/upload-1785854762125-472951704.jpg",
-            "src/assets/images/upload-1785854762349-934392195.jpg",
-            "src/assets/images/upload-1785854762546-637712146.jpg",
-            "src/assets/images/upload-1785854772523-733979190.jpg",
-            "src/assets/images/upload-1785854837193-536431283.jpg",
-            "src/assets/images/upload-1785854837504-149662538.jpg",
-            "src/assets/images/upload-1785854853458-314806700.jpg",
-            "src/assets/images/upload-1785854911950-393237208.jpg",
-            "src/assets/images/upload-1785854912092-606130758.jpg",
-            "src/assets/images/upload-1785854912264-43100113.jpg",
-            "src/assets/images/upload-1785854912405-764961639.jpg",
-            "src/assets/images/upload-1785854949497-298746886.jpg",
-            "src/assets/images/upload-1785854949707-790802034.jpg",
-            "src/assets/images/upload-1785854949919-169147215.jpg",
-            "src/assets/images/upload-1785854950067-975914251.jpg",
-            "src/assets/images/upload-1785854999643-971377988.jpg",
-            "src/assets/images/upload-1785854999840-635751920.jpg",
-            "src/assets/images/upload-1785855000067-126267609.jpg",
-            "src/assets/images/upload-1785855000283-141721088.jpg",
-            "src/assets/images/upload-1785855088730-478425204.jpg",
-            "src/assets/images/upload-1785855089003-460948248.jpg",
-            "src/assets/images/upload-1785855089236-122570960.jpg",
-            "src/assets/images/upload-1785855089540-182966441.jpg"
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/1.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/2.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/4.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/5.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/6.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/7.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/8.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/9.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/11.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/12.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/13.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/14.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/15.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/16.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/17.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/18.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/19.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/20.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/21.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/22.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/23.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/24.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/25.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/26.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/27.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/28.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/29.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/30.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/31.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/32.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/33.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/34.jpg"
           ],
           "rows": [
             {
               "id": "row-1",
               "images": [
-                "src/assets/images/upload-1785854742887-408923678.jpg",
-                "src/assets/images/upload-1785854743105-794728029.jpg",
-                "src/assets/images/upload-1785854743334-914860998.jpg",
-                "src/assets/images/upload-1785854743587-283134867.jpg"
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/1.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/2.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/4.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/5.jpg"
               ]
             },
             {
-              "id": "row-1785854754449",
+              "id": "row-1785966782621",
               "images": [
-                "src/assets/images/upload-1785854761899-252991782.jpg",
-                "src/assets/images/upload-1785854762125-472951704.jpg",
-                "src/assets/images/upload-1785854762349-934392195.jpg",
-                "src/assets/images/upload-1785854762546-637712146.jpg"
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/6.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/7.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/8.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/9.jpg"
               ]
             },
             {
-              "id": "row-1785854764054",
+              "id": "row-1785966979705",
               "images": [
-                "src/assets/images/upload-1785854772523-733979190.jpg",
-                "src/assets/images/upload-1785854837193-536431283.jpg",
-                "src/assets/images/upload-1785854837504-149662538.jpg",
-                "src/assets/images/upload-1785854853458-314806700.jpg"
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/11.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/12.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/13.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/14.jpg"
               ]
             },
             {
-              "id": "row-1785854885954",
+              "id": "row-1785967017084",
               "images": [
-                "src/assets/images/upload-1785854911950-393237208.jpg",
-                "src/assets/images/upload-1785854912092-606130758.jpg",
-                "src/assets/images/upload-1785854912264-43100113.jpg",
-                "src/assets/images/upload-1785854912405-764961639.jpg"
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/15.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/16.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/17.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/18.jpg"
               ]
             },
             {
-              "id": "row-1785854941339",
+              "id": "row-1785967017768",
               "images": [
-                "src/assets/images/upload-1785854949497-298746886.jpg",
-                "src/assets/images/upload-1785854949707-790802034.jpg",
-                "src/assets/images/upload-1785854949919-169147215.jpg",
-                "src/assets/images/upload-1785854950067-975914251.jpg"
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/19.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/20.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/21.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/22.jpg"
               ]
             },
             {
-              "id": "row-1785854991584",
+              "id": "row-1785967018231",
               "images": [
-                "src/assets/images/upload-1785854999643-971377988.jpg",
-                "src/assets/images/upload-1785854999840-635751920.jpg",
-                "src/assets/images/upload-1785855000067-126267609.jpg",
-                "src/assets/images/upload-1785855000283-141721088.jpg"
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/23.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/24.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/25.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/26.jpg"
               ]
             },
             {
-              "id": "row-1785854992031",
+              "id": "row-1785967106974",
               "images": [
-                "src/assets/images/upload-1785855088730-478425204.jpg",
-                "src/assets/images/upload-1785855089003-460948248.jpg",
-                "src/assets/images/upload-1785855089236-122570960.jpg",
-                "src/assets/images/upload-1785855089540-182966441.jpg"
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/27.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/28.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/29.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/30.jpg"
+              ]
+            },
+            {
+              "id": "row-1785967107199",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/31.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/32.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/33.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/34.jpg"
               ]
             }
           ]
