@@ -104,10 +104,14 @@ export const defaultSiteData: CMSSiteData = {
       "categories": [
         "Explainer"
       ],
-      "thumbnail": "src/assets/images/upload-1785782933070-841166572.png",
+      "thumbnail": "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/project-274-.1.PNG",
       "link": "#",
-      "hoverGif": "src/assets/images/upload-1785782808567-351401186.gif",
-      "isPublished": true
+      "hoverGif": "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/Video.As.Gif-1.mp4",
+      "isPublished": true,
+      "gifModes": {
+        "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/274.Video.mp4": false,
+        "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/Video.As.Gif-1.mp4": true
+      }
     },
     {
       "id": 2,
@@ -148,10 +152,11 @@ export const defaultSiteData: CMSSiteData = {
       ],
       "thumbnail": "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/Cover.jpg",
       "link": "#",
-      "hoverGif": "src/assets/images/upload-1785856060404-200388656.gif",
+      "hoverGif": "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/Video.As.Gif.-4-thumbnails.mp4",
       "isPublished": true,
       "gifModes": {
-        "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/Main.video.mp4": false
+        "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/Main.video.mp4": false,
+        "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/Video.As.Gif.-4-thumbnails.mp4": true
       }
     },
     {
@@ -161,10 +166,13 @@ export const defaultSiteData: CMSSiteData = {
       "categories": [
         "Explainer"
       ],
-      "thumbnail": "src/assets/images/upload-1785865988150-876754353.webp",
+      "thumbnail": "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/thumpnail.webp",
       "link": "#",
-      "hoverGif": "",
-      "isPublished": true
+      "hoverGif": "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-Devices.Connected.To.Internet-Screen.mp4",
+      "isPublished": true,
+      "gifModes": {
+        "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-Devices.Connected.To.Internet-Screen.mp4": true
+      }
     }
   ],
   "projects": [],
@@ -173,11 +181,11 @@ export const defaultSiteData: CMSSiteData = {
       "id": 1,
       "title": "247 MAINTENANCE - CONNECTING HOMES TO EXPERTS",
       "shortDescription": "247 MAINTENANCE IS A SMART APP THAT CONNECTS YOU WITH EXPERT TECHNICIANS FOR ALL YOUR HOME NEEDS ANYWHERE IN THE UNITED ARAB EMIRATES.",
-      "heroImage": "src/assets/images/upload-1785782936684-906719297.png",
+      "heroImage": "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/project-274-.1.PNG",
       "role": "STORYBOARD, ILLUSTRATION, ANIMATION & SFX",
       "client": "247 MAINTENANCE",
       "description": "247 MAINTENANCE IS A SMART APP THAT CONNECTS YOU WITH EXPERT TECHNICIANS FOR ALL YOUR HOME NEEDS ANYWHERE IN THE UNITED ARAB EMIRATES.",
-      "videoUrl": "https://youtu.be/4u_Oq_YKyfQ?si=3OajOLO0uZ-bQmQV",
+      "videoUrl": "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/274.Video.mp4",
       "categories": [
         "Explainer"
       ],
@@ -186,25 +194,21 @@ export const defaultSiteData: CMSSiteData = {
           "type": "grid",
           "label": "",
           "images": [
-            "src/assets/images/upload-1785782854011-20728020.gif",
-            "src/assets/images/upload-1785782854542-397219208.gif",
-            "src/assets/images/upload-1785782870235-959486316.gif",
-            "src/assets/images/upload-1785782871563-501530893.gif"
+            "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/Video.As.Gif-1.mp4",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/Video.As.Gif-2.mp4"
           ],
           "rows": [
             {
               "id": "row-1",
               "images": [
-                "src/assets/images/upload-1785782854011-20728020.gif",
-                "src/assets/images/upload-1785782854542-397219208.gif"
-              ]
-            },
-            {
-              "id": "row-1785782856865",
-              "images": [
-                "src/assets/images/upload-1785782870235-959486316.gif",
-                "src/assets/images/upload-1785782871563-501530893.gif"
-              ]
+                "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/Video.As.Gif-1.mp4",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/Video.As.Gif-2.mp4"
+              ],
+              "gifModes": {
+                "src/assets/images/upload-1785782854542-397219208.gif": false,
+                "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/Video.As.Gif-1.mp4": true,
+                "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/Video.As.Gif-2.mp4": true
+              }
             }
           ]
         },
@@ -212,50 +216,54 @@ export const defaultSiteData: CMSSiteData = {
           "type": "grid",
           "label": "ILLUSTRATION",
           "images": [
-            "src/assets/images/upload-1785783064950-806875938.png",
-            "src/assets/images/upload-1785783065769-274057791.png",
-            "src/assets/images/upload-1785783066372-946054396.png",
-            "src/assets/images/upload-1785783078105-610343475.png",
-            "src/assets/images/upload-1785783078584-475365769.png",
-            "src/assets/images/upload-1785783079051-660321867.png",
-            "src/assets/images/upload-1785783095729-905556347.png",
-            "src/assets/images/upload-1785783096123-201609074.png",
-            "src/assets/images/upload-1785783096603-922085192.png",
-            "src/assets/images/upload-1785783130790-995421902.png",
-            "src/assets/images/upload-1785783131133-531732989.png",
-            "src/assets/images/upload-1785783131544-798747746.png"
+            "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/project-274-.1.PNG",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/project-274-.3.PNG",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/project-274-.4.PNG",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/project-274-.5.PNG",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/project-274-.6.PNG",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/project-274-.7.PNG",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/project-274-.8.PNG",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/project-274-.9.PNG",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/project-274-.10.PNG",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/project-274-.11.PNG",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/project-274-.12.PNG",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/project-274-.16.PNG"
           ],
           "rows": [
             {
               "id": "row-1",
               "images": [
-                "src/assets/images/upload-1785783064950-806875938.png",
-                "src/assets/images/upload-1785783065769-274057791.png",
-                "src/assets/images/upload-1785783066372-946054396.png"
+                "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/project-274-.1.PNG",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/project-274-.3.PNG",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/project-274-.4.PNG"
               ]
             },
             {
               "id": "row-1785783071720",
               "images": [
-                "src/assets/images/upload-1785783078105-610343475.png",
-                "src/assets/images/upload-1785783078584-475365769.png",
-                "src/assets/images/upload-1785783079051-660321867.png"
+                "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/project-274-.5.PNG",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/project-274-.6.PNG",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/project-274-.7.PNG"
               ]
             },
             {
               "id": "row-1785783082312",
               "images": [
-                "src/assets/images/upload-1785783095729-905556347.png",
-                "src/assets/images/upload-1785783096123-201609074.png",
-                "src/assets/images/upload-1785783096603-922085192.png"
+                "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/project-274-.8.PNG",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/project-274-.9.PNG",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/project-274-.10.PNG"
               ]
             },
             {
               "id": "row-1785783099847",
+              "images": []
+            },
+            {
+              "id": "row-1786106842221",
               "images": [
-                "src/assets/images/upload-1785783130790-995421902.png",
-                "src/assets/images/upload-1785783131133-531732989.png",
-                "src/assets/images/upload-1785783131544-798747746.png"
+                "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/project-274-.11.PNG",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/project-274-.12.PNG",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/project-274-.16.PNG"
               ]
             }
           ]
@@ -267,7 +275,23 @@ export const defaultSiteData: CMSSiteData = {
         "Illustrator"
       ],
       "behanceLink": "https://behance.net",
-      "externalLink": "#"
+      "externalLink": "#",
+      "customFields": [
+        {
+          "id": "field-role",
+          "label": "ROLE",
+          "value": "STORYBOARD, ILLUSTRATION, ANIMATION & SFX"
+        },
+        {
+          "id": "field-client",
+          "label": "CLIENT BRAND NAME",
+          "value": "247 MAINTENANCE"
+        }
+      ],
+      "gifModes": {
+        "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/274.Video.mp4": false,
+        "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/Video.As.Gif-1.mp4": true
+      }
     },
     {
       "id": 2,
@@ -690,18 +714,19 @@ export const defaultSiteData: CMSSiteData = {
         }
       ],
       "gifModes": {
-        "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/Main.video.mp4": false
+        "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/Main.video.mp4": false,
+        "https://github.com/youssefabaali/my-website-assets/releases/download/Project-WORKLEAP-GSP-2026/Video.As.Gif.-4-thumbnails.mp4": true
       }
     },
     {
       "id": 5,
       "title": "AINSI VA MANU (TV SERIES) -ENHANCING DRAMA WITH MOTION DESIGN",
       "shortDescription": "Ainsi va Manu : A drama centered around Manuela, a 16-year-old teenager. \nFacing an eviction threat from a property developer, Manuela makes a crucial decision to fight and defend her home and neighborhood.",
-      "heroImage": "src/assets/images/upload-1785863747638-496021892.webp",
+      "heroImage": "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/thumpnail.webp",
       "role": "ILLUSTRATION, ANIMATION",
       "client": "247 MAINTENANCE",
       "description": "The director needed screen graphics to support the visual storytelling, and my task was to design and animate these graphics in a way that aligns with the series’ shots and reflects its dramatic energy.",
-      "videoUrl": "0",
+      "videoUrl": "",
       "categories": [
         "Explainer"
       ],
@@ -710,14 +735,20 @@ export const defaultSiteData: CMSSiteData = {
           "type": "grid",
           "label": "EPISODE 8 - DEVICES CONNECTED TO INTERNET",
           "images": [
-            "src/assets/images/upload-1785865886624-419630568.gif"
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-8-Devices.Connected.To.Internet-Screen.mp4",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-8-Devices.Connected.To.Internet.mp4"
           ],
           "rows": [
             {
               "id": "row-1",
               "images": [
-                "src/assets/images/upload-1785865886624-419630568.gif"
-              ]
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-8-Devices.Connected.To.Internet-Screen.mp4",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-8-Devices.Connected.To.Internet.mp4"
+              ],
+              "gifModes": {
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-8-Devices.Connected.To.Internet-Screen.mp4": true,
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-8-Devices.Connected.To.Internet.mp4": true
+              }
             }
           ]
         },
@@ -725,43 +756,73 @@ export const defaultSiteData: CMSSiteData = {
           "type": "grid",
           "label": "EPISODE 7 - ",
           "images": [
-            "src/assets/images/upload-1785865243083-469496019.gif",
-            "src/assets/images/upload-1785865275114-299829211.gif",
-            "src/assets/images/upload-1785865288643-748896425.gif",
-            "src/assets/images/upload-1785865311416-341952401.gif",
-            "src/assets/images/upload-1785865318759-57648528.gif"
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-Character.Trying.To.Enter.Code-Screen.mp4",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-Character.Trying.To.Enter.Code-GIF.mp4",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-Devices.Connected.To.Internet-Screen.mp4",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-Devices.Connected.To.Internet-GIF.mp4",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-KIM.IS.WRITING.CODE-Screen.mp4",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-KIM.IS.WRITING.CODE-GIF.mp4",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-MESSAGE.TEXT.BUBBLE-Screen.mp4",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-MESSAGE.TEXT.BUBBLE-GIF.mp4",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-PHONE.RINGING-Screen.mp4",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-PHONE.RINGING-GIF.mp4"
           ],
           "rows": [
             {
-              "id": "row-1",
+              "id": "row-1786113269966",
               "images": [
-                "src/assets/images/upload-1785865243083-469496019.gif"
-              ]
-            },
-            {
-              "id": "row-1785865246841",
-              "images": [
-                "src/assets/images/upload-1785865275114-299829211.gif"
-              ]
-            },
-            {
-              "id": "row-1785865277691",
-              "images": [
-                "src/assets/images/upload-1785865288643-748896425.gif"
-              ]
-            },
-            {
-              "id": "row-1785865305097",
-              "images": [
-                "src/assets/images/upload-1785865311416-341952401.gif"
-              ]
-            },
-            {
-              "id": "row-1785865305316",
-              "images": [
-                "src/assets/images/upload-1785865318759-57648528.gif"
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-Character.Trying.To.Enter.Code-Screen.mp4",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-Character.Trying.To.Enter.Code-GIF.mp4"
               ],
-              "singleImageColumns": 1
+              "gifModes": {
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-Character.Trying.To.Enter.Code-GIF.mp4": true,
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-Character.Trying.To.Enter.Code-Screen.mp4": true,
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-Character.Trying.To.Enter.Code-video-to-GIF.mp4": true
+              }
+            },
+            {
+              "id": "row-1786113391652",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-Devices.Connected.To.Internet-Screen.mp4",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-Devices.Connected.To.Internet-GIF.mp4"
+              ],
+              "gifModes": {
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-Devices.Connected.To.Internet-GIF.mp4": true,
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-Devices.Connected.To.Internet-Screen.mp4": true
+              }
+            },
+            {
+              "id": "row-1786113422158",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-KIM.IS.WRITING.CODE-Screen.mp4",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-KIM.IS.WRITING.CODE-GIF.mp4"
+              ],
+              "gifModes": {
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-KIM.IS.WRITING.CODE-GIF.mp4": true,
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-KIM.IS.WRITING.CODE-Screen.mp4": true
+              }
+            },
+            {
+              "id": "row-1786113446421",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-MESSAGE.TEXT.BUBBLE-Screen.mp4",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-MESSAGE.TEXT.BUBBLE-GIF.mp4"
+              ],
+              "gifModes": {
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-MESSAGE.TEXT.BUBBLE-GIF.mp4": true,
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-MESSAGE.TEXT.BUBBLE-Screen.mp4": true
+              }
+            },
+            {
+              "id": "row-1786113447360",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-PHONE.RINGING-Screen.mp4",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-PHONE.RINGING-GIF.mp4"
+              ],
+              "gifModes": {
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-PHONE.RINGING-GIF.mp4": true,
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-PHONE.RINGING-Screen.mp4": true
+              }
             }
           ]
         },
@@ -769,21 +830,20 @@ export const defaultSiteData: CMSSiteData = {
           "type": "grid",
           "label": "EPISODE 6 - COMPUTER ENCRYPTED",
           "images": [
-            "src/assets/images/upload-1785865420941-446804186.gif",
-            "src/assets/images/upload-1785865480158-613373504.gif"
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.6.Computer.Encrypted-screen.mp4",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.6.Computer.Encrypted.mp4"
           ],
           "rows": [
             {
-              "id": "row-1",
+              "id": "row-1786110060184",
               "images": [
-                "src/assets/images/upload-1785865420941-446804186.gif"
-              ]
-            },
-            {
-              "id": "row-1785865422299",
-              "images": [
-                "src/assets/images/upload-1785865480158-613373504.gif"
-              ]
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.6.Computer.Encrypted-screen.mp4",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.6.Computer.Encrypted.mp4"
+              ],
+              "gifModes": {
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.6.Computer.Encrypted-screen.mp4": true,
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.6.Computer.Encrypted.mp4": true
+              }
             }
           ]
         },
@@ -791,21 +851,33 @@ export const defaultSiteData: CMSSiteData = {
           "type": "grid",
           "label": "EPISODE 5 - MESSAGE TEXT BUBBLE",
           "images": [
-            "src/assets/images/upload-1785865532518-326165644.gif",
-            "src/assets/images/upload-1785865590534-677730487.gif"
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.5.MESSAGE.TEXT.BUBBLE-Screen.mp4",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.5.MESSAGE.TEXT.BUBBLE.mp4",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.5.Selfie.challenge-Screen.mp4",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.5.Selfie.challenge.mp4"
           ],
           "rows": [
             {
-              "id": "row-1",
+              "id": "row-1786110085344",
               "images": [
-                "src/assets/images/upload-1785865532518-326165644.gif"
-              ]
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.5.MESSAGE.TEXT.BUBBLE-Screen.mp4",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.5.MESSAGE.TEXT.BUBBLE.mp4"
+              ],
+              "gifModes": {
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.5.MESSAGE.TEXT.BUBBLE.mp4": true,
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.5.MESSAGE.TEXT.BUBBLE-Screen.mp4": true
+              }
             },
             {
-              "id": "row-1785865586559",
+              "id": "row-1786117545014",
               "images": [
-                "src/assets/images/upload-1785865590534-677730487.gif"
-              ]
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.5.Selfie.challenge-Screen.mp4",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.5.Selfie.challenge.mp4"
+              ],
+              "gifModes": {
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.5.Selfie.challenge-Screen.mp4": true,
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.5.Selfie.challenge.mp4": true
+              }
             }
           ]
         },
@@ -813,14 +885,19 @@ export const defaultSiteData: CMSSiteData = {
           "type": "grid",
           "label": "EPISODE 4 - APP MUSIC",
           "images": [
-            "src/assets/images/upload-1785865617702-905195725.gif"
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.4-app.music.gif",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.4-app.music.mp4"
           ],
           "rows": [
             {
               "id": "row-1",
               "images": [
-                "src/assets/images/upload-1785865617702-905195725.gif"
-              ]
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.4-app.music.gif",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.4-app.music.mp4"
+              ],
+              "gifModes": {
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.4-app.music.mp4": true
+              }
             }
           ]
         },
@@ -828,14 +905,20 @@ export const defaultSiteData: CMSSiteData = {
           "type": "grid",
           "label": "EPISODE 3 - WALLPAPER PHONE",
           "images": [
-            "src/assets/images/upload-1785865676693-134799887.gif"
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.3-wallpaper.gif",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.3-wallpaper.mp4"
           ],
           "rows": [
             {
               "id": "row-1",
               "images": [
-                "src/assets/images/upload-1785865676693-134799887.gif"
-              ]
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.3-wallpaper.gif",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.3-wallpaper.mp4"
+              ],
+              "singleImageColumns": 1,
+              "gifModes": {
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.3-wallpaper.mp4": true
+              }
             }
           ]
         },
@@ -843,14 +926,21 @@ export const defaultSiteData: CMSSiteData = {
           "type": "grid",
           "label": "EPISODE 2 - AIR TAG",
           "images": [
-            "src/assets/images/upload-1785865699012-124330384.gif"
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.2.-.Air.Tag.gif",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.2-Air.Tag.mp4"
           ],
           "rows": [
             {
               "id": "row-1",
               "images": [
-                "src/assets/images/upload-1785865699012-124330384.gif"
-              ]
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.2.-.Air.Tag.gif",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.2-Air.Tag.mp4"
+              ],
+              "gifModes": {
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.2.-.Air.Tag.gif": false,
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode.2-Air.Tag.mp4": true
+              },
+              "singleImageColumns": 1
             }
           ]
         }
@@ -873,7 +963,10 @@ export const defaultSiteData: CMSSiteData = {
           "label": "CLIENT ",
           "value": ""
         }
-      ]
+      ],
+      "gifModes": {
+        "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-Devices.Connected.To.Internet-Screen.mp4": true
+      }
     }
   ],
   "services": [
