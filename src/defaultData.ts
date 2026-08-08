@@ -173,6 +173,74 @@ export const defaultSiteData: CMSSiteData = {
       "gifModes": {
         "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-Devices.Connected.To.Internet-Screen.mp4": true
       }
+    },
+    {
+      "id": 6,
+      "title": "POKA - MAKING AI WORK ON THE FACTORY FLOOR",
+      "category": "Explainer",
+      "categories": [
+        "Explainer"
+      ],
+      "thumbnail": "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/THUMBNAILS.jpg",
+      "link": "#",
+      "hoverGif": "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Poka-Ai-GIF-2.mp4",
+      "isPublished": true,
+      "gifModes": {
+        "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/274.Video.mp4": false,
+        "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/Video.As.Gif-1.mp4": true,
+        "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Poka-Ai-GIF-2.mp4": true
+      }
+    },
+    {
+      "id": 7,
+      "title": "CLUB DE LECTURE - WHERE BOOKS MEET MUSIC",
+      "category": "Explainer",
+      "categories": [
+        "Explainer"
+      ],
+      "thumbnail": "https://github.com/youssefabaali/my-website-assets/releases/download/Project-CLUB-DE-LECTURE-Logo-Animation/project.thumbnail.picture.jpg",
+      "link": "#",
+      "hoverGif": "https://github.com/youssefabaali/my-website-assets/releases/download/Project-CLUB-DE-LECTURE-Logo-Animation/logo-animatio-30F.mp4",
+      "isPublished": true,
+      "gifModes": {
+        "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/274.Video.mp4": false,
+        "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/Video.As.Gif-1.mp4": true,
+        "https://github.com/youssefabaali/my-website-assets/releases/download/Project-CLUB-DE-LECTURE-Logo-Animation/logo-animatio-30F.mp4": true,
+        "https://github.com/youssefabaali/my-website-assets/releases/download/Project-CLUB-DE-LECTURE-Logo-Animation/project.thumbnail.picture.jpg": false
+      }
+    },
+    {
+      "id": 8,
+      "title": "FONETIK CREATIVE STUDIO SHOWREEL",
+      "category": "Explainer",
+      "categories": [
+        "Explainer"
+      ],
+      "thumbnail": "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Thumbnail.jpg",
+      "link": "#",
+      "hoverGif": "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/GIF-4.gif",
+      "isPublished": true,
+      "gifModes": {
+        "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/274.Video.mp4": false,
+        "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/Video.As.Gif-1.mp4": true
+      }
+    },
+    {
+      "id": 9,
+      "title": "Fonetik Studio - Launching a New Creative Chapter",
+      "category": "Explainer",
+      "categories": [
+        "Explainer"
+      ],
+      "thumbnail": "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/scene-.3.jpg",
+      "link": "#",
+      "hoverGif": "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/Gif-1.mp4",
+      "isPublished": true,
+      "gifModes": {
+        "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/274.Video.mp4": false,
+        "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/Video.As.Gif-1.mp4": true,
+        "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/Gif-1.mp4": true
+      }
     }
   ],
   "projects": [],
@@ -966,6 +1034,484 @@ export const defaultSiteData: CMSSiteData = {
       ],
       "gifModes": {
         "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Ainsi-va-Manu-TV-Series/Episode-7-Devices.Connected.To.Internet-Screen.mp4": true
+      }
+    },
+    {
+      "id": 6,
+      "title": "POKA - MAKING AI WORK ON THE FACTORY FLOOR",
+      "shortDescription": "Poka is a global Canadian platform (an IFS company) trusted by manufacturing giants like Nestlé and L'Oréal. This video focuses on introducing Poka Assistant, an AI digital coworker for factory workers that instantly answers their questions and turns long manuals into quick, clear steps right on the shop floor.",
+      "heroImage": "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/THUMBNAILS.jpg",
+      "role": "ANIMATION",
+      "client": "POKA",
+      "description": "I was responsible for full animation and motion direction, bringing the internal team's static designs to life. The challenge was to transform complex AI and software concepts into a simple, engaging visual story, delivering a high-end video that reflects Poka’s global brand power.",
+      "videoUrl": "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Poka-Ai-Main-Video.mp4",
+      "categories": [
+        "Explainer"
+      ],
+      "sections": [
+        {
+          "type": "grid",
+          "label": "",
+          "images": [
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Poka-Ai-GIF-1.mp4",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Poka-Ai-GIF-3.mp4",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Poka-Ai-GIF-2.mp4",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Poka-Ai-GIF-4.mp4"
+          ],
+          "rows": [
+            {
+              "id": "row-1",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Poka-Ai-GIF-1.mp4",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Poka-Ai-GIF-3.mp4"
+              ],
+              "gifModes": {
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Poka-Ai-GIF-1.mp4": true,
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Poka-Ai-GIF-2.mp4": true,
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Poka-Ai-GIF-3.mp4": true,
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Poka-Ai-GIF-4.mp4": true
+              }
+            },
+            {
+              "id": "row-1786200609013",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Poka-Ai-GIF-2.mp4",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Poka-Ai-GIF-4.mp4"
+              ],
+              "gifModes": {
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Poka-Ai-GIF-2.mp4": true
+              }
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "label": "",
+          "images": [
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-1.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-2.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-3.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-4.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-5.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-6.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-7.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-8.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-9.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-10.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-13.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-26.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-29.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-58.jpg"
+          ],
+          "rows": [
+            {
+              "id": "row-1",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-1.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-2.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-3.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-4.jpg"
+              ]
+            },
+            {
+              "id": "row-1786199470204",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-5.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-6.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-7.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-8.jpg"
+              ]
+            },
+            {
+              "id": "row-1786199352025",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-9.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-10.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-13.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-26.jpg"
+              ]
+            },
+            {
+              "id": "row-1786199418456",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-29.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Picture-58.jpg"
+              ],
+              "singleImageColumns": 2
+            },
+            {
+              "id": "row-1786199907777",
+              "images": []
+            }
+          ]
+        }
+      ],
+      "date": "2024",
+      "softwareUsed": [
+        "After Effects",
+        "Illustrator"
+      ],
+      "behanceLink": "https://behance.net",
+      "externalLink": "#",
+      "customFields": [
+        {
+          "id": "field-role",
+          "label": "ROLE",
+          "value": "ANIMATION"
+        },
+        {
+          "id": "field-1786196608541",
+          "label": "Client",
+          "value": ""
+        }
+      ],
+      "gifModes": {
+        "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/274.Video.mp4": false,
+        "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/Video.As.Gif-1.mp4": true,
+        "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Poka/Poka-Ai-GIF-2.mp4": true
+      }
+    },
+    {
+      "id": 7,
+      "title": "CLUB DE LECTURE - WHERE BOOKS MEET MUSIC",
+      "shortDescription": "Librairie l'Échange is a historic bookstore in Montreal, established in 1976, known for specializing in used books and graphic novels.",
+      "heroImage": "https://github.com/youssefabaali/my-website-assets/releases/download/Project-CLUB-DE-LECTURE-Logo-Animation/project.thumbnail.picture.jpg",
+      "role": "ANIMATION ",
+      "client": "247 MAINTENANCE",
+      "description": "To expand their reach, the bookstore launched a new video content series titled \"Club de Lecture.\" This series hosts artists and friends from the Québecois music scene, who perform intimate songs within the bookstore's unique setting.",
+      "videoUrl": "https://github.com/youssefabaali/my-website-assets/releases/download/Project-CLUB-DE-LECTURE-Logo-Animation/logo-animatio-30F.mp4",
+      "categories": [
+        "Explainer"
+      ],
+      "sections": [
+        {
+          "type": "grid",
+          "label": "",
+          "images": [
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-CLUB-DE-LECTURE-Logo-Animation/storyboard.jpg"
+          ],
+          "rows": [
+            {
+              "id": "row-1",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-CLUB-DE-LECTURE-Logo-Animation/storyboard.jpg"
+              ]
+            },
+            {
+              "id": "row-1786206883340",
+              "images": []
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "label": "",
+          "images": [
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-CLUB-DE-LECTURE-Logo-Animation/Text.animation-1.gif",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-CLUB-DE-LECTURE-Logo-Animation/Text.animation-2.gif",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-CLUB-DE-LECTURE-Logo-Animation/Text.animation-3.gif"
+          ],
+          "rows": [
+            {
+              "id": "row-1786206997337",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-CLUB-DE-LECTURE-Logo-Animation/Text.animation-1.gif",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-CLUB-DE-LECTURE-Logo-Animation/Text.animation-2.gif",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-CLUB-DE-LECTURE-Logo-Animation/Text.animation-3.gif"
+              ]
+            }
+          ]
+        }
+      ],
+      "date": "2024",
+      "softwareUsed": [
+        "After Effects",
+        "Illustrator"
+      ],
+      "behanceLink": "https://behance.net",
+      "externalLink": "#",
+      "customFields": [
+        {
+          "id": "field-role",
+          "label": "ROLE",
+          "value": "ANIMATION "
+        },
+        {
+          "id": "field-client",
+          "label": "CLIENT BRAND NAME",
+          "value": ""
+        }
+      ],
+      "gifModes": {
+        "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/274.Video.mp4": false,
+        "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/Video.As.Gif-1.mp4": true,
+        "https://github.com/youssefabaali/my-website-assets/releases/download/Project-CLUB-DE-LECTURE-Logo-Animation/logo-animatio-30F.mp4": true,
+        "https://github.com/youssefabaali/my-website-assets/releases/download/Project-CLUB-DE-LECTURE-Logo-Animation/project.thumbnail.picture.jpg": false
+      }
+    },
+    {
+      "id": 8,
+      "title": "FONETIK CREATIVE STUDIO SHOWREEL",
+      "shortDescription": "fo.ne.tik is an independent, hybrid creative studio based in Montreal, specializing in full-scale audiovisual production, brand creation, and cultural localization.",
+      "heroImage": "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Thumbnail.jpg",
+      "role": "ANIMATION",
+      "client": "247 MAINTENANCE",
+      "description": "247 MAINTENANCE IS A SMART APP THAT CONNECTS YOU WITH EXPERT TECHNICIANS FOR ALL YOUR HOME NEEDS ANYWHERE IN THE UNITED ARAB EMIRATES.",
+      "videoUrl": "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Video-FONETIK-Horizontal-EN.mp4",
+      "categories": [
+        "Explainer"
+      ],
+      "sections": [
+        {
+          "type": "grid",
+          "label": "VERTICAL",
+          "images": [
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Video-FONETIK-Vertical-EN.mp4"
+          ],
+          "rows": [
+            {
+              "id": "row-1",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Video-FONETIK-Vertical-EN.mp4"
+              ],
+              "singleImageColumns": 1
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "label": "",
+          "images": [
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/GIF-4.gif",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/GIF-5.gif",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/GIF-1.gif",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/GIF-3.gif",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/GIF-2.gif"
+          ],
+          "rows": [
+            {
+              "id": "row-1",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/GIF-4.gif",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/GIF-5.gif"
+              ]
+            },
+            {
+              "id": "row-1786208729931",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/GIF-1.gif",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/GIF-3.gif"
+              ]
+            },
+            {
+              "id": "row-1786208760939",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/GIF-2.gif"
+              ],
+              "singleImageColumns": 2
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "label": "",
+          "images": [
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.2.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.3.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.4.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.5.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.6.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.7.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.8.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.10.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.14.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.19.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.20.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.21.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.22.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.23.jpg"
+          ],
+          "rows": [
+            {
+              "id": "row-1",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.2.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.3.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.4.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.5.jpg"
+              ]
+            },
+            {
+              "id": "row-1786207910689",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.6.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.7.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.8.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.10.jpg"
+              ]
+            },
+            {
+              "id": "row-1786207953597",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.14.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.19.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.20.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.21.jpg"
+              ]
+            },
+            {
+              "id": "row-1786208006728",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.22.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-Fonetik-Showreel/Scene-.23.jpg"
+              ],
+              "singleImageColumns": 2
+            }
+          ]
+        }
+      ],
+      "date": "2024",
+      "softwareUsed": [
+        "After Effects",
+        "Illustrator"
+      ],
+      "behanceLink": "https://behance.net",
+      "externalLink": "#",
+      "customFields": [
+        {
+          "id": "field-role",
+          "label": "ROLE",
+          "value": "ANIMATION"
+        },
+        {
+          "id": "field-client",
+          "label": "CLIENT ",
+          "value": ""
+        }
+      ],
+      "gifModes": {
+        "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/274.Video.mp4": false,
+        "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/Video.As.Gif-1.mp4": true
+      }
+    },
+    {
+      "id": 9,
+      "title": "FONETIK STUDIO - LAUNCHING A NEW CREATIVE CHAPTER",
+      "shortDescription": "fo.ne.tik is an independent, hybrid creative studio based in Montreal, specializing in full-scale audiovisual production, brand creation, and cultural localization.",
+      "heroImage": "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/scene-.3.jpg",
+      "role": "ANIMATION",
+      "client": "247 MAINTENANCE",
+      "description": "Fonetik Studio needed a high-energy showreel with smooth logo, text, and transition animations. \nWorking from their video and storyboard, I brought the motion graphics to life.",
+      "videoUrl": "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/Video-Fonetik.mp4",
+      "categories": [
+        "Explainer"
+      ],
+      "sections": [
+        {
+          "type": "grid",
+          "label": "",
+          "images": [
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/Gif-1.mp4",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/Gif-2.gif",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/Gif-3.gif",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/Gif-4.gif"
+          ],
+          "rows": [
+            {
+              "id": "row-1786210208586",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/Gif-1.mp4",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/Gif-2.gif"
+              ],
+              "gifModes": {
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/Gif-1.mp4": true
+              }
+            },
+            {
+              "id": "row-1786211533896",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/Gif-3.gif",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/Gif-4.gif"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "label": "",
+          "images": [
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/scene-.2.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/scene-.3.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/scene-.5.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/scene-.8.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/scene-.9.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/scene-.10.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/scene-.11.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/scene-.12.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/scene-.13.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/scene-.14.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/scene-.15.jpg",
+            "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/scene-.16.jpg"
+          ],
+          "rows": [
+            {
+              "id": "row-1",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/scene-.2.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/scene-.3.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/scene-.5.jpg"
+              ]
+            },
+            {
+              "id": "row-1786211426924",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/scene-.8.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/scene-.9.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/scene-.10.jpg"
+              ]
+            },
+            {
+              "id": "row-1786211471092",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/scene-.11.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/scene-.12.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/scene-.13.jpg"
+              ]
+            },
+            {
+              "id": "row-1786211492888",
+              "images": [
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/scene-.14.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/scene-.15.jpg",
+                "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/scene-.16.jpg"
+              ]
+            }
+          ]
+        }
+      ],
+      "date": "2024",
+      "softwareUsed": [
+        "After Effects",
+        "Illustrator"
+      ],
+      "behanceLink": "https://behance.net",
+      "externalLink": "#",
+      "customFields": [
+        {
+          "id": "field-role",
+          "label": "ROLE",
+          "value": "ANIMATION"
+        },
+        {
+          "id": "field-client",
+          "label": "CLIENT ",
+          "value": ""
+        }
+      ],
+      "gifModes": {
+        "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/274.Video.mp4": false,
+        "https://github.com/youssefabaali/my-website-assets/releases/download/project-274/Video.As.Gif-1.mp4": true,
+        "https://github.com/youssefabaali/my-website-assets/releases/download/Project-FONETIK-REEL/Gif-1.mp4": true
       }
     }
   ],
